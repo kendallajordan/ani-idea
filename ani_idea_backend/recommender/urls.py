@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import recommend_anime
+from . import views
 
 # Add URL paths for API endpoints here
 urlpatterns = [
-    path('recommend/', recommend_anime, name='recommend_anime'),
+    path('recommend/', views.recommend_anime, name='recommend_anime'),
+    path('anime/', views.get_anime_data, name='get_anime_data'),
 ]
