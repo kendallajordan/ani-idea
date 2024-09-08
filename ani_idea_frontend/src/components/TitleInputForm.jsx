@@ -1,3 +1,4 @@
+import styles from "./TitleInputForm.module.css";
 import { useState } from "react";
 
 export default function TitleInputForm({ setTitles }) {
@@ -26,9 +27,10 @@ export default function TitleInputForm({ setTitles }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.formContainer} onSubmit={handleSubmit}>
       {inputFields.map((input, index) => (
         <input
+          className={styles.inputField}
           key={index}
           type="text"
           value={input}
@@ -36,14 +38,19 @@ export default function TitleInputForm({ setTitles }) {
           placeholder={`Enter Anime Title #${index + 1}`}
         />
       ))}
-      <button
-        type="button"
-        onClick={handleAddField}
-        disabled={inputFields.length >= 5}
-      >
-        Add Another Title
-      </button>
-      <button type="submit">Get Recommendations</button>
+      <div className={styles.buttonContainer}>
+        <button
+          className={`${styles.addButton} ${inputFields.length >= 5 ? styles.disabledButton : ''}`}
+          type="button"
+          onClick={handleAddField}
+          disabled={inputFields.length >= 5}
+        >
+          Add Another Title
+        </button>
+        <button className={styles.submitButton} type="submit">
+          Get Recommendations
+        </button>
+      </div>
     </form>
   );
 }

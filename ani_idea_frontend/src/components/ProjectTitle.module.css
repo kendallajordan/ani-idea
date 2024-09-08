@@ -1,0 +1,17 @@
+.projectTitle {
+    position: relative;
+    z-index: 1;
+    margin: -2rem auto 2rem auto;
+    padding: 1rem 2rem;
+    max-width: 80%;
+    width: fit-content;
+    background-color: #fac001;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgb(70, 57, 0);
+    border-width: 3px;
+  }
+  

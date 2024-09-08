@@ -1,16 +1,12 @@
-// Basic right now, later turn this into a list component with "list item components"
-// index is index, anime is the anime object, use dot notation to reference a field from the object
+import styles from "./RecommendationList.module.css";
+import AnimeCard from "./AnimeCard";
+
 export default function RecommendationList({ recommendations }) {
   return (
-    <div>
-      <h2>Recommended Anime:</h2>
-      <ul>
-        {recommendations.map((anime, index) => (
-          <li key={index}>
-            {anime["Name"]}
-          </li>
-        ))}
-      </ul>
+    <div className={styles.listContainer}>
+      {recommendations.map((anime, index) => (
+        <AnimeCard key={index} anime={anime} />
+      ))}
     </div>
   );
 }

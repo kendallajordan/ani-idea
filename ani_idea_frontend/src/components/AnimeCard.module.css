@@ -1,0 +1,122 @@
+.card {
+    display: flex;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 900px;
+    height: 360px; /* Taller height to fit the full image */
+    background-color: #ff660077;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 30%;
+    height: 100%;
+    object-fit: contain; /* Ensure the entire image is shown without cutting off parts */
+  }
+  
+  .cardContent {
+    margin: 0;
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 2px auto;
+    color: #fff;
+  }
+  
+  .englishTitle {
+    font-size: 1.1rem;
+    margin: 2px auto;
+  }
+  
+  .source {
+    font-size: 1rem;
+    margin: 1px auto;
+  }
+  
+  .synopsis {
+    font-size: 1rem;
+    max-height: 140px; /* Increased height to give more space */
+    overflow-y: auto;
+    margin: 10px auto;
+    color: #773600;
+  }
+  
+  .synopsis::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .synopsis::-webkit-scrollbar-thumb {
+    background-color: #914100;
+    border-radius: 10px;
+  }
+  
+  .synopsis::-webkit-scrollbar-thumb:hover {
+    background-color: #692f00;
+  }
+  
+  .genres {
+    font-size: 1rem;
+    margin: 5px auto;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .cardContent {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .card {
+      flex-direction: row;
+      height: auto;
+    }
+  
+    .image {
+      width: 40%;
+      height: auto
+    }
+  
+    .cardContent {
+      width: 60%;
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .englishTitle {
+      font-size: 1rem;
+    }
+  
+    .source, .genres, .synopsis {
+      font-size: 0.9rem;
+    }
+  
+    .synopsis {
+      max-height: 80px; /* Slightly smaller for very small screens */
+    }
+  }
+  

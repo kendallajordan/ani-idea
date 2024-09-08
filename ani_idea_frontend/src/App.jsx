@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import TitleInputForm from "./components/TitleInputForm";
 import RecommendationList from "./components/RecommendationList";
 import { getRecommendations } from "./api";
+import Header from "./components/Header";
+import ProjectTitle from "./components/ProjectTitle";
+import Description from './components/Description';
 
 function App() {
   const [titles, setTitles] = useState([]);
@@ -34,7 +37,9 @@ function App() {
 
   return (
     <div>
-      <h1>Ani-Ideas: Anime Recommendation System</h1>
+      <Header />
+      <ProjectTitle />
+      <Description />
       <TitleInputForm setTitles={setTitles} />
       {error && <p style={{ color: "red" }}>{error}</p>}
       {loading ? (

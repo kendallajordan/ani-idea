@@ -1,0 +1,26 @@
+/* Description.module.css */
+.descriptionContainer {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #a14900; /* Light color for readability on dark background */
+  }
+  
+  .descriptionText {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .descriptionText {
+      font-size: 20px; /* Smaller font for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .descriptionText {
+      font-size: 16px; /* Even smaller font for mobile devices */
+    }
+  }
+  

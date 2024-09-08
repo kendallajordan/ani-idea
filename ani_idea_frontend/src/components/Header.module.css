@@ -1,0 +1,7 @@
+.header {
+  background-size: cover;
+  background-position: center;
+  height: 350px; /* Adjust height as needed */
+  width: 100%;
+  position: relative;
+}

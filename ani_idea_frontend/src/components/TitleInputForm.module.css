@@ -1,0 +1,63 @@
+/* TitleInputForm.module.css */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.inputField {
+  width: 80%;
+  max-width: 500px;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Button styling */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.addButton,
+.submitButton {
+  padding: 10px 20px;
+  background-color: #813e00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.addButton:hover,
+.submitButton:hover {
+  background-color: #af5500;
+}
+
+.disabledButton {
+  background-color: #888;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .inputField {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .addButton,
+  .submitButton {
+    font-size: 16px;
+  }
+}
